@@ -25,8 +25,24 @@ public class Api {
     private String method;
 
     @Column(name = "response_code")
-    private Long response_code;
+    private Integer response_code;
 
     @Column(name = "response_status")
     private String response_status;
+
+    public Integer getResponse_code() {
+        return response_code;
+    }
+
+    public void setResponse_code(Integer response_code) {
+        this.response_code = response_code;
+    }
+
+    public String getResponse_status() {
+        return response_status;
+    }
+
+    public void setResponse_status(String response_status) {
+        this.response_status = response_status;
+    }
 }
