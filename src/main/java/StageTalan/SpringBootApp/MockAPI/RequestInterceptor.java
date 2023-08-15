@@ -25,14 +25,14 @@ public class RequestInterceptor implements HandlerInterceptor {
             String endpoint = "/" + pathSegments[1];
             String method = request.getMethod().toUpperCase();
 
-            List<Api> matchingRequests = apiRepository.findByEndpointAndMethod(endpoint, method);
+            Api matchingRequests = apiRepository.findByEndpointAndMethod(endpoint, method);
 
-            if (!matchingRequests.isEmpty()) {
+            //if (!matchingRequests.isEmpty()) {
                 // Redirect the request to the MockAPIController
-                request.getRequestDispatcher("/" + endpoint).forward(request, response);
-                return false;
+                //request.getRequestDispatcher("/" + endpoint).forward(request, response);
+                //return false;
             }
-        }
+        //}
 
         return true;
     }

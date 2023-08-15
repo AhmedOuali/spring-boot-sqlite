@@ -1,6 +1,5 @@
 package StageTalan.SpringBootApp.MockAPI.controller;
 
-import java.lang.String;
 import StageTalan.SpringBootApp.MockAPI.exception.ResourceNotFoundException;
 import StageTalan.SpringBootApp.MockAPI.model.Api;
 import StageTalan.SpringBootApp.MockAPI.repository.ApiRepository;
@@ -13,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/mockapi/v1/apis")
-public class ApiController {
+public class ManagerController {
 
 
     @Autowired
@@ -45,6 +44,7 @@ public class ApiController {
         updateApi.setMethod(apiDetails.getMethod());
         updateApi.setResponse_code(apiDetails.getResponse_code());
         updateApi.setResponse_status(apiDetails.getResponse_status());
+        updateApi.setResponse_data(apiDetails.getResponse_data());
 
         apiRepository.save(updateApi);
 

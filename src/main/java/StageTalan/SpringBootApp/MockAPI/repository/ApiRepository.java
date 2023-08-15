@@ -9,6 +9,7 @@ import java.util.List;
 
 
 public interface ApiRepository extends JpaRepository<Api, Long> {
-    @Query("SELECT a FROM Api a WHERE a.endpoint =:endpoint AND a.method =:method")
-    List<Api> findByEndpointAndMethod(String endpoint, String method);
+    //@Query("SELECT a FROM Api a WHERE a.endpoint =:endpoint AND a.method =:method")
+
+    Api findByEndpointAndMethod(String endpoint, String method);
 }
