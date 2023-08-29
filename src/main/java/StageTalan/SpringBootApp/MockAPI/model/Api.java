@@ -14,7 +14,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Table(name = "apis")
-
 public class Api {
 
     @Id
